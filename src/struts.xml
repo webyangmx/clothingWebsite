@@ -1,0 +1,59 @@
+<!DOCTYPE struts PUBLIC
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+     "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+<constant name="struts.i18n.encoding" value="GBK"/>
+		
+	<package name="default" extends="json-default"><!-- 继承json，后面都是json数据返回 -->
+		<!-- User -->
+		<action name="register" class="userAction" method="register">
+			<result name="success" type="json">
+				<param name="includeProperties">successInfo.*</param>
+			</result>		
+		</action>		
+		<action name="login" class="userAction" method="login">
+			<result name="success" type="json">
+				<param name="includeProperties">successInfo.*,userInfo.*</param>
+			</result>
+		</action>	
+		<action name="logout" class="userAction" method="logout">
+			<result name="success" type="json">
+				<param name="includeProperties">successInfo.*</param>
+			</result>
+		</action>
+		<!-- Goods -->
+		<action name="getNewGoods" class="goodsAction" method="getNewGoods">
+			<result name="success" type="json">
+				<param name="includeProperties">successInfo.*,allGoodsInfo.*</param> 
+			</result>
+		</action>
+		<action name="getGoodsByCategoryId" class="goodsAction" method="getGoodsByCategoryId">
+			<result name="success" type="json">
+				<param name="includeProperties">successInfo.*,allGoodsInfo.*</param>
+			</result>
+		</action>	
+		<action name="getGoodsById" class="goodsAction" method="getGoodsById">
+			<result name="success" type="json">
+				<param name="includeProperties">successInfo.*,goodsInfoMap.*</param>
+				</result>
+		</action>
+		<!-- Category -->
+		<action name="getAllCategory" class="ShoppingAction" method="getAllCategory">
+			<result name="success" type="json">
+				<param name="includeProperties">successInfo.*,allCategoryInfo.*</param>
+			</result>
+		</action>
+		<!-- shoppcar -->
+		<action name="getShopcar" class="shopcarAction" method="getShopcar">
+			<result name="success" type="json">
+				<param name="includeProperties">successInfo.*,allShopcarInfo.*</param>
+			</result>
+		</action>
+		<action name="insertShopcar" class="shopcarAction" method="insertShopcar">
+			<result name="success" type="json">
+				<param name="includeProperties">successInfo.*</param>
+			</result>
+		</action>
+	</package>
+</struts>

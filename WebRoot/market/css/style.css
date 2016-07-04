@@ -1,0 +1,142 @@
+body{
+	font-family: 'Microsoft Yahei';
+    background: #fff;
+    margin: 0 auto;
+    color: #fff;
+}
+a,a:hover,a:active,a:visited{
+	text-decoration: none;
+	color:#fff;
+	cursor: pointer;
+}
+li{
+	list-style: none;
+	display: inline;
+}
+#carousel-example-generic{
+	position: absolute;
+	width: 100%;
+	height: 704px;
+	overflow: hidden;
+}
+/*头部*/
+.header{
+	background:url(../images/banner33.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-height: 720px;
+    position: relative;
+}
+#header-login,#header-text,#header-shoppingCart{
+	height:120px;
+	line-height: 120px;
+}
+#header-login{
+	font-size:1.5em;
+	padding-left: 1.8em;
+}
+
+#isLogin,#logout-link{
+	display:none;
+}
+
+#header-text{
+	text-align: center;
+	font-size:2.5em;
+}
+#header-shoppingCart{
+	text-align: right;
+	font-size: 1.5em;
+}
+#nav-banner{
+	font-size: 1.2em;
+	border-radius: 5px;
+}
+.nav-item{
+	background-color: #FA558F;
+	text-align: center;
+	height: 2.1em;
+	line-height: 2.1em;
+	cursor: pointer;
+}
+.nav-item:hover{
+	background-color: #3C3B3B;
+}
+#caption{
+	text-align: center;
+	font-weight: 300;
+	width: 70%;
+	margin-top: 15%;
+}
+#caption>h1{
+	font-size:4em;
+}
+#caption>p{
+	font-size: 1.2em;
+}
+
+/*底部*/
+.footer-Logo{
+	color: #fff;
+	background-color: #FA558F;
+	padding: 1em 2em;
+}
+.span1{
+	font-size: 1.5em;
+	float: left;
+}
+.span2{
+	font-size: 1.2em;
+	float: right;
+}
+
+/*中间div*/
+.main{
+	color: #3C3B3B;
+	background-color: #fff;
+	margin-top: -450px;
+	min-height: 600px;
+}
+/*黑色加入购物车按钮*/
+.add-to-cart-black,.related-add-to-cart{
+	outline: none;
+    display: inline-block;
+    font-size: 1em;
+    padding: 8px 34px;
+    border: 2px solid #3C3B3B;
+    background: #3C3B3B;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    font-weight: 300;
+}
+.add-to-cart-black:hover,.related-add-to-cart:hover{
+	background-color: #fff;
+	color: #3C3B3B;
+}
+/*橙色加入购物车按钮*/
+.add-to-cart-orange{
+	color: #fff;
+	background-color: #ef8743;
+	margin: 1em 0;
+	font-weight: 600;
+	padding: 12px 2em;
+	transition: all 0.3s ease-in-out;
+}
+.add-to-cart-orange:hover{
+	background-color: #FF9000;
+	color: #fff;
+}
+/*条栏目/面包屑导航*/
+.section{
+	background: #F3F3F3;
+    padding: 10px;
+    color: #333;
+    font-size: 1.2em;
+    line-height: 20px;
+    margin: 25px 0;
+}
+#module{
+	display: none;
+}

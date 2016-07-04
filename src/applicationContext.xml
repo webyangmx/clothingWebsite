@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+		<property name="url"
+			value="jdbc:mysql://127.0.0.1:3306/market">
+		</property>
+		<property name="username" value="root"></property>
+		<property name="password" value="264618"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>org/model/Shopcar.hbm.xml</value>
+				<value>org/model/Category.hbm.xml</value>
+				<value>org/model/Goods.hbm.xml</value>
+				<value>org/model/User.hbm.xml</value>
+				<value>org/model/Order.hbm.xml</value>
+				<value>org/model/Orderitem.hbm.xml</value></list>
+		</property></bean>
+		
+		
+		<!-- user -->
+	<bean id="userDao" class="org.dao.imp.UserDao">
+		<property name="sessionFactory" ref="sessionFactory">
+		</property>
+	</bean>
+	
+	<bean id="userService" class="org.service.imp.UserService">
+		<property name="userDao">
+			<ref bean="userDao"/>
+		</property>
+	</bean>
+	
+	<bean id="userAction" class="org.action.UserAction">
+		<property name="userService">
+			<ref bean="userService"/>
+		</property>
+	</bean>
+	
+	
+	<!-- goods -->
+	<bean id="goodsDao" class="org.dao.imp.GoodsDao">
+		<property name="sessionFactory" ref="sessionFactory">
+		</property>
+	</bean>
+	<bean id="goodsService" class="org.service.imp.GoodsService">
+		<property name="goodsDao">
+			<ref bean="goodsDao"/>
+		</property>
+	</bean>
+	<bean id="goodsAction" class="org.action.GoodsAction">
+		<property name="goodsService">
+			<ref bean="goodsService"/>
+		</property>
+	</bean>
+	
+	<!-- category -->
+	<bean id="categoryDao" class="org.dao.imp.CategoryDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="categoryService" class="org.service.imp.CategoryService">
+		<property name="categoryDao"><!-- 与setter方法名字对应  -->
+			<ref bean="categoryDao"/>
+		</property>
+	</bean>
+	<bean id="ShoppingAction" class="org.action.ShoppingAction">
+		<property name="categoryService">
+			<ref bean="categoryService"/>
+		</property>
+	</bean>
+	
+	<!-- shopcar -->
+	<bean id="shopcarDao" class="org.dao.imp.ShopcarDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="shopcarService" class="org.service.imp.ShopcarService">
+		<property name="shopcarDao">
+			<ref bean="shopcarDao"/>
+		</property>
+	</bean>
+	<bean id="shopcarAction" class="org.action.ShopcarAction">
+		<property name="shopcarService">
+			<ref bean="shopcarService"/>
+		</property>
+	</bean>
+</beans>

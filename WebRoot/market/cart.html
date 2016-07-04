@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>购物车</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/cart.css">
+	<link rel="stylesheet" href="css/login-register.css">
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+	<!-- 登录注册对话框 -->
+	<div class="col-md-6 col-md-offset-4" id="login-register-window">
+		<div class="col-md-12">
+			<div id="login-form">				
+				<form>
+					<h2 id="login-header">登录</h2>
+					<div class="form-group">
+						<p>账号：</p>
+						<input type="text" class="form-control" id="login-username" placeholder="请输入用户名">
+					</div>
+					<div class="form-group">
+						<p>密码：</p>
+						<input type="password" class="form-control" id="login-password" placeholder="请输入密码">
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Check me out
+						</label>
+					</div>
+					<button class="btn btn-default" id="login-submit">提交</button>
+					<a id="register-link">还没有账号？</a>
+				</form>
+			</div>
+
+			<div id="register-form">
+				<form>
+					<h2 id="register-header">注册</h2>
+					<div class="form-group">
+						<p>账号：</p>
+						<input type="text" class="form-control" id="register-username" placeholder="请输入用户名">
+					</div>
+					<div class="form-group">
+						<p>密码：</p>
+						<input type="password" class="form-control" id="register-password" placeholder="请输入密码">
+					</div>
+					<div class="form-group">
+						<p>确认密码：</p>
+						<input type="password" class="form-control" id="confirm-password" placeholder="再次输入密码">
+					</div>
+					<button class="btn btn-default" id="register-submit">提交</button>
+					<a id="return-login">返回登录</a>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="mask"></div>
+	<!-- 登录注册对话框 -->
+	<div class="col-md-12 header">
+		<div class="container">
+			<div class="col-md-3" id="header-login">
+				<a><span id="login-link">登录</span></a>
+				<span id="isLogin">
+					<span>您好 </span>
+					<span id="username">用户名字</span>
+				</span>
+				<a id="logout-link">注销</a>
+			</div>
+			<div class="col-md-6" id="header-text">
+				<a><p>NEW FASHIONS</p></a>
+			</div>
+			<div class="col-md-3" id="header-shoppingCart">
+				<a href="cart.html">
+					<p>
+						<img src="images/cart.png">
+					</p>
+				</a>
+			</div>	
+		</div>
+		<div class="container" id="nav-banner">
+			<ul>
+				<a href="index.html">
+					<div class="col-md-2 nav-item" id="nav-item-1">
+						<li>HOME</li>
+					</div>
+				</a>
+				<a href="products.html?category=2">
+					<div class="col-md-2 nav-item" id="nav-item-2"><li>WOMEN</li></div>
+				</a>
+				<a href="products.html?category=1">
+					<div class="col-md-2 nav-item" id="nav-item-3"><li>MEN</li></div>
+				</a>
+				<a href="products.html?category=3">
+					<div class="col-md-2 nav-item" id="nav-item-4"><li>BABY</li></div>
+				</a>
+				<div class="col-md-2 nav-item" id="nav-item-5"><li>BLOG</li></div>
+				<div class="col-md-2 nav-item" id="nav-item-6"><li>SHOP ONLINE</li></div>
+			</ul>
+		</div>
+		<div class="container" id="caption">
+			<h1>FASHION AND CREATIVITY</h1>
+			<p>
+				Sed dapibus est a lorem dictum, id dignissim lacus fermentum. Nulla ut nibh in libero maximus pretium Nunc vulputate vel tellus ac elementum. Duis nec tincidunt dolor, ac dictum eros.</p>
+			</div>
+		</div>
+
+		<div class="col-md-12 main">
+
+			<div class="container">
+				<ul class="section">
+					<li>Home</li>/
+					<li>Single</li>
+				</ul>
+
+				<div class="cart-header" id="module">
+					<div class="close close1"> </div>
+					<div class="cart-sec">
+						<div class="cart-item cyc">
+							<a class="cart-goods-link">
+								<img class="cart-goods-img img-responsive" style="width: 135px;" />
+							</a>
+						</div>
+						<div class="cart-item-info">
+							<h4 class="cart-goods-name">--</h4>
+							<h4>
+								<span>价格: ¥ </span>
+								<span class="cart-goods-price">--</span>
+							</h4>
+							<h4 style="display: inline">数量：</h4>
+							<input min="1" type="number" value="1" class="form-control cart-goods-number">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+
+				<div class="col-md-9 cart-items" id="shoppingCartList">
+					<h3>My Shopping Bag</h3>
+					<div class="cart-header">
+						<div class="close"> </div>
+						<div class="cart-sec">
+							<div class="cart-item cyc">
+								<img src="images/pic-2.jpg"/>
+							</div>
+							<div class="cart-item-info">
+								<h4 class="cart-goods-name">Mast Harbour</h4>
+								<h4>
+									<span>价格: ¥ </span>
+									<span class="cart-goods-price">150.00</span>
+								</h4>
+								<h4 style="display: inline">数量：</h4>
+								<input min="1" type="number" value="1" class="form-control cart-goods-number">
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+
+					<div class="cart-header">
+						<div class="close"> </div>
+						<div class="cart-sec">
+							<div class="cart-item cyc">
+								<img src="images/pic-2.jpg"/>
+							</div>
+							<div class="cart-item-info">
+								<h4 class="cart-goods-name">Mast Harbour</h4>
+								<h4>
+									<span>价格: ¥ </span>
+									<span class="cart-goods-price">150.00</span>
+								</h4>
+								<h4 style="display: inline">数量：</h4>
+								<input min="1" type="number" value="1" class="form-control cart-goods-number">
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-3 cart-total">
+					<a href="index.html" class="btn btn-md btn-default continue">继续购物</a>
+					<div class="price-details">
+						<h4>费用详情</h4>
+						<span class="width-50">基本费用</span>
+						<span class="width-50">350.00</span>
+						<span class="width-50">折扣</span>
+						<span class="width-50">---</span>
+						<span class="width-50">运费</span>
+						<span class="width-50">---</span>
+						<div class="clearfix"></div>				 
+					</div>	
+					<h4 class="width-50 last-price">总费用</h4>
+					<span class="width-50 final">450.00</span>
+					<div class="clearfix"></div>
+					<a class="btn btn-md btn-default order">确认订单</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12 footer-Logo">
+			<span class="span1">NEW FASHIONS</span>
+			<span class="span2">Copyright © 2015.Company name All rights reserved.</span>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/commonFun.js"></script>
+		<script src="js/cart.js"></script>
+		<script src="js/simpleCart.min.js"></script>
+		<script src="js/login-register.js"></script>
+	</body>
+	</html>

@@ -1,0 +1,22 @@
+#goods_name{
+	color: #333333;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+#goods_description{
+	color: #CDCDCD;
+    font-weight: 400;
+    margin-bottom: 1em;
+    font-size: 0.9em;
+}
+#goods_price{
+	font-size: 1.8em;
+    color: #fa558f;
+    line-height: 1.8em;
+    letter-spacing: 1px;
+}
+
+.realated-goods{
+	text-align: center;
+	padding-bottom: 50px;
+}

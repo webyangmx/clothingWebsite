@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>single</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/single.css">
+	<link rel="stylesheet" href="css/etalage.css">
+	<link rel="stylesheet" href="css/login-register.css">
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+	<!-- 登录注册对话框 -->
+	<div class="col-md-6 col-md-offset-4" id="login-register-window">
+		<div class="col-md-12">
+			<div id="login-form">				
+				<form>
+					<h2 id="login-header">登录</h2>
+					<div class="form-group">
+						<p>账号：</p>
+						<input type="text" class="form-control" id="login-username" placeholder="请输入用户名">
+					</div>
+					<div class="form-group">
+						<p>密码：</p>
+						<input type="password" class="form-control" id="login-password" placeholder="请输入密码">
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Check me out
+						</label>
+					</div>
+					<button class="btn btn-default" id="login-submit">提交</button>
+					<a id="register-link">还没有账号？</a>
+				</form>
+			</div>
+
+			<div id="register-form">
+				<form>
+					<h2 id="register-header">注册</h2>
+					<div class="form-group">
+						<p>账号：</p>
+						<input type="text" class="form-control" id="register-username" placeholder="请输入用户名">
+					</div>
+					<div class="form-group">
+						<p>密码：</p>
+						<input type="password" class="form-control" id="register-password" placeholder="请输入密码">
+					</div>
+					<div class="form-group">
+						<p>确认密码：</p>
+						<input type="password" class="form-control" id="confirm-password" placeholder="再次输入密码">
+					</div>
+					
+					<button class="btn btn-default" id="register-submit">提交</button>
+					<a id="return-login">返回登录</a>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="mask"></div>
+	<!-- 登录注册对话框 -->
+	<div class="col-md-12 header">
+		<div class="container">
+			<div class="col-md-3" id="header-login">
+				<a><span id="login-link">登录</span></a>
+				<span id="isLogin">
+					<span>您好 </span>
+					<span id="username">用户名字</span>
+				</span>
+				<a id="logout-link">注销</a>
+			</div>
+			<div class="col-md-6" id="header-text">
+				<a><p>NEW FASHIONS</p></a>
+			</div>
+			<div class="col-md-3" id="header-shoppingCart">
+				<a href="cart.html">
+					<p>
+						<img src="images/cart.png">
+					</p>
+				</a>
+			</div>	
+		</div>
+		<div class="container" id="nav-banner">
+			<ul>
+				<a href="index.html">
+					<div class="col-md-2 nav-item" id="nav-item-1">
+						<li>HOME</li>
+					</div>
+				</a>
+				<a href="products.html?category=2">
+					<div class="col-md-2 nav-item" id="nav-item-2">
+						<li>WOMEN</li></div>
+					</a>
+					<a href="products.html?category=1">
+						<div class="col-md-2 nav-item" id="nav-item-3"><li>MEN</li></div>
+					</a>
+					<a href="products.html?category=3">
+						<div class="col-md-2 nav-item" id="nav-item-4"><li>BABY</li></div>
+					</a>
+					<div class="col-md-2 nav-item" id="nav-item-5"><li>BLOG</li></div>
+					<div class="col-md-2 nav-item" id="nav-item-6"><li>SHOP ONLINE</li></div>
+				</ul>
+			</div>
+			<div class="container" id="caption">
+				<h1>FASHION AND CREATIVITY</h1>
+				<p>
+					Sed dapibus est a lorem dictum, id dignissim lacus fermentum. Nulla ut nibh in libero maximus pretium Nunc vulputate vel tellus ac elementum. Duis nec tincidunt dolor, ac dictum eros.</p>
+				</div>
+			</div>
+
+			<div class="col-md-12 main">
+				<div class="container">
+					<ul class="section">
+						<li>Home</li>/
+						<li>Single</li>
+					</ul>
+
+					<div class="col-md-4" style="padding: 0px;">
+						<ul id="etalage">
+							<li>
+								<img class="etalage_thumb_image preview-img1" src="images/s1.jpg" />
+								<img class="etalage_source_image preview-img1" src="images/s1.jpg" />
+							</li>
+							<li>
+								<img class="etalage_thumb_image preview-img2" src="images/s1.jpg" />
+								<img class="etalage_source_image preview-img2" src="images/s1.jpg" />
+							</li>
+							<li>
+								<img class="etalage_thumb_image preview-img3" src="images/1.jpg" />
+								<img class="etalage_source_image preview-img3" src="images/1.jpg"/>
+							</li>
+							<div class="clearfix"></div>
+						</ul>
+					</div>
+
+					<div class="col-md-8">
+						<h5 id="goods_name">BELLE FILLE GREY BLACK</h5>
+						<p id="goods_description">Pellentesque pretium</p>
+						<p id="goods_price">$180</p>
+						<a class="btn btn-default add-to-cart-black" id="add_to_cart">
+							加入购物车</a>
+						</div>
+					</div>
+
+					<div class="container">
+						<h6 class="section">Related Products</h6>
+					</div>
+
+					<div class="col-md-12">
+
+						<div class="col-md-3 realated-goods" id="module">
+							<a class="related-goods-link"><img class="related-goods-img img-responsive"></a>
+							<div class="col-md-12 price-container">
+								<h3 class="related-goods-name">--</h3>
+								<a class="btn btn-default btn-md related-add-to-cart add-to-cart">
+									<input type="hidden" class="goodsId">
+									加入购物车</a>
+								</div>
+							</div>
+
+							<div class="container" id="related-goodsList">
+						<!-- <div class="col-md-3 realated-goods">
+							<img src="images/bs1.jpg" alt="" class="related-goods-img img-responsive">
+							<div class="col-md-12 price-container">
+								<h3 class="related-goods-name">BELLE BW</h3>
+								<a class="btn btn-default btn-md related-add-to-cart">加入购物车</a>
+							</div>
+						</div>-->
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-12 footer-Logo">
+				<span class="span1">NEW FASHIONS</span>
+				<span class="span2">Copyright © 2015.Company name All rights reserved.</span>
+			</div>
+			<script src="js/jquery.min.js"></script>
+			<script src="js/jquery.cookie.js"></script>
+			<script src="js/commonFun.js"></script>
+			<script src="js/jquery.etalage.min.js"></script>
+			<script src="js/single.js"></script>
+			<script src="js/login-register.js"></script>
+		</body>
+		</html>
