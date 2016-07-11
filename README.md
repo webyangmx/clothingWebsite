@@ -1,3 +1,3 @@
 # clothingWebsite
 一个基于ssh框架的网站
-![image](http://github.com/webyangmx/clothingWebsite/raw/master/screenshot/screenshot.jpg)
+![image](https://raw.githubusercontent.com/webyangmx/clothingWebsite/master/screenShot/screenshot%20(1).jpg)
